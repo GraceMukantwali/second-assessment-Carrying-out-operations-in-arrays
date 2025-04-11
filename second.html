@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <div id="product-list">
+        </div>
+
+    <script>
+        const products = [
+            { name: 'Laptop', price: 1200 },
+            { name: 'Mouse', price: 25 },
+            { name: 'Keyboard', price: 75 },
+            { name: 'Monitor', price: 300 },
+            { name: 'Webcam', price: 50 }
+        ];
+
+        const productListDiv = document.getElementById('product-list');
+
+        products.forEach(product => {
+            const productElement = document.createElement('p'); // Create a <p> element for each product
+            productElement.textContent = `${product.name} - $${product.price}`; // Display product name and price
+            productListDiv.appendChild(productElement); // Add the <p> element to the div
+        });
+    </script>
+</body>
+</html>
